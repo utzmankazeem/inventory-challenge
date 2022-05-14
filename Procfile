@@ -1,0 +1,1 @@
+web: node inventory.js

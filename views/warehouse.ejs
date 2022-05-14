@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoppify Inventory</title>
+    </head>
+    <body>
+
+
+        <h1>Your Shoppify Inventory</h1>
+            <a href="/">Home</a>
+            <a href="/warehouse">Add warehouse & location</a>
+            <a href="/lwarehouse">List warehouse & location</a>
+
+            
+            <% if(typeof errors != 'undefined') { %>
+            
+                <% errors.forEach(function(error){ %>
+                    <h5 style="color: red"> <%- error.msg %> </h5>
+
+                <% }) %>
+        
+            <% } %>
+            <% if(message != '') { %>
+                <p style="color: green"> <%- message %> </h5>
+            <% } %>
+                
+            <% if(error_msg != ''){ %>
+                <p style="color: red"> <%= error_msg %> </p>
+            <% } %>
+
+            
+            <h4>Add Warehouse Information</h4>
+            <form action="/warehouse" method="post">
+
+                    <p>Item-name: <input type="text" name="item"></p>
+                    <p>Quantity: <input type="number" name="quantity"></p>
+                    <p>Destination: <input type="text" name="location">
+                    <p>Details: <br><textarea rows="10" cols="25" name="details"></textarea></p>
+
+                <input type="submit" value="click to submit">
+            </form>
+           
+    </body>
+</html>

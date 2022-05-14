@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoppify Inventory</title>
+    </head>
+    <body>
+        
+        <h1>Your Shoppify Inventory</h1>
+            <a href="/">Home</a>
+            <a href="/additem">Add Item</a>
+            <a href="/viewitems">View Items</a>
+
+        <h4>Edit Item</h4>
+
+        <form action="/edit/<%-item['_id']%>" method="post">
+
+                    <p>Name: <input type="text" name="name" value="<%-item['name']%>"></p>
+                    <p>Quantity: <input type="number" name="quantity" value="<%-item['quantity']%>"></p>
+                <input type="submit" value="click to submit">
+
+            </form>
+
+
+
+    </body>
+
+</html>

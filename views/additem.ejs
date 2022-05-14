@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoppify Inventory</title>
+    </head>
+    <body>
+
+
+        <h1>Your Shoppify Inventory</h1>
+            <a href="/">Home</a>
+            <a href="/additem">Add Item</a>
+            <a href="/viewitems">View Items</a>
+
+            <% if(typeof errors != 'undefined') { %>  
+                <% errors.forEach(function(error){ %>
+                    <h5 style="color: red"> <%= error.msg %> </h5>
+                <% }) %>
+            <% } %>
+
+            <% if(message != '') { %>
+                <p style="color: green"> <%= message %> </p>
+            <% } %>
+                
+            <% if(error_msg != ''){ %>
+                <p style="color: red"> <%= error_msg %> </p>
+            <% } %>
+
+            
+            <h4>Add Item</h4>
+            <form action="/additem" method="post">
+                    <p>Name: <input type="text" name="name"value="<%= typeof name != 'undefined' ? name : '' %>"></p>
+                    <p>Item Quantity: <input type="number" name="quantity"
+                        value="<%= typeof quantity != 'undefined' ? quantity : '' %>">
+                    </p>
+                </p>
+                <input type="submit" value="click to submit">
+            </form>
+           
+    </body>
+</html>

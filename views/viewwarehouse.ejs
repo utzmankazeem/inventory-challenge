@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoppify Inventory</title>
+    </head>
+    <body>
+
+
+        <h1>Your Shoppify Inventory</h1>
+            <a href="/">Home</a>
+            <a href="/warehouse">Add warehouse & location</a>
+            <a href="/lwarehouse">List warehouse & location</a>
+
+        <h4>Warehouse</h4>
+
+        <table border="1">
+            <tr>
+                <th>Ttem</th>
+                <th>Quantity</th>
+                <th>Location</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <% locations.forEach(function(location) { %>
+                <td> <%-location.item%> </td>
+                <td> <%-location.quantity%> </td>
+                <td> <%-location.location%> </td>
+                <td> <%-location.details%> </td>
+            </tr>
+            <% }) %> 
+        </table>
+
+    </body>
+</html>
