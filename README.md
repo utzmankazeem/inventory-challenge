@@ -21,7 +21,7 @@ click on packages button on the left tab and search for
 express, express-session, flash, mongoose
 click on the +icon to add and install each of this packages
 
-# npm start
+# nodemon
 run nodemon to start app
 
 
