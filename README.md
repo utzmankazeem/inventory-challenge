@@ -15,14 +15,14 @@ We create Item as well as Warehouse
 creates item record
 updates item record when needed
 
-#install Packages
+# Install Packages
 to install all dependencies
 click on packages button on the left tab and search for 
 express, express-session, flash, mongoose
 click on the +icon to add and install each of this packages
 
 # npm start
-npm start to run app
+run nodemon to start app
 
 
 
